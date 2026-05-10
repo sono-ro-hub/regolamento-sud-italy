@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUD ITALY RP</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#020617,#0f172a,#1e1b4b,#111827);
+color:white;
+line-height:1.9;
+overflow-x:hidden;
+}
+
+/* HERO IMAGE */
+.hero{
+height:540px;
+background:
+linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.45)),
+url('https://cdn.discordapp.com/attachments/1490430980782030958/1496265098321465565/IMG_0273.png?ex=69fe58f6&is=69fd0776&hm=1bdfacb276355bac8d8f87e43376aa10048f2add29ee52fff641cbfd9e6851d5&');
+background-size:cover;
+background-position:center;
+border-bottom:6px solid #00f7ff;
+box-shadow:0 0 45px rgba(0,247,255,0.5);
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:140px;
+background:linear-gradient(to top,#020617,transparent);
+}
+
+/* MAIN */
+.container{
+width:93%;
+max-width:1300px;
+margin:auto;
+padding:45px 0;
+}
+
+/* CARDS */
+.card{
+background:linear-gradient(145deg,#111827,#1e293b,#312e81);
+border-radius:30px;
+padding:42px;
+margin-bottom:42px;
+border:2px solid rgba(255,255,255,0.08);
+box-shadow:0 15px 50px rgba(0,0,0,0.45);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px) scale(1.01);
+box-shadow:0 18px 60px rgba(255,255,255,0.08);
+}
+
+/* SECTION TITLES */
+.section-title{
+font-size:42px;
+font-weight:900;
+margin-bottom:30px;
+text-transform:uppercase;
+letter-spacing:3px;
+background:linear-gradient(90deg,#00f7ff,#ff00c8,#ffe600,#00ff85,#ff6b00);
+background-size:300%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:rainbow 8s linear infinite;
+border-left:7px solid #ff00c8;
+padding-left:18px;
+}
+
+@keyframes rainbow{
+0%{background-position:0%}
+100%{background-position:300%}
+}
+
+/* SUB TITLES */
+.sub-title{
+font-size:30px;
+font-weight:800;
+margin-top:32px;
+margin-bottom:18px;
+text-shadow:0 0 14px rgba(255,255,255,0.25);
+}
+
+.sub-title:nth-of-type(1){color:#00e5ff;}
+.sub-title:nth-of-type(2){color:#ff4d6d;}
+.sub-title:nth-of-type(3){color:#39ff14;}
+.sub-title:nth-of-type(4){color:#ffd500;}
+.sub-title:nth-of-type(5){color:#c77dff;}
+.sub-title:nth-of-type(6){color:#ff8800;}
+.sub-title:nth-of-type(7){color:#00f5a0;}
+.sub-title:nth-of-type(8){color:#38bdf8;}
+
+/* LISTS */
+ul{
+padding-left:28px;
+}
+
+li{
+margin-bottom:14px;
+font-size:18px;
+font-weight:700;
+padding:18px 20px;
+border-radius:22px;
+transition:0.35s;
+list-style-position:outside;
+color:#fff;
+background-size:300% 300%;
+animation:multiGlow 10s ease infinite;
+box-shadow:0 0 22px rgba(255,255,255,0.12);
+border:2px solid rgba(255,255,255,0.08);
+}
+
+/* COLORI DIVERSI PER OGNI REGOLA */
+li:nth-child(1){
+background-image:linear-gradient(135deg,#00c6ff,#0072ff,#00f2fe);
+}
+
+li:nth-child(2){
+background-image:linear-gradient(135deg,#ff0080,#ff4d6d,#ff8fab);
+}
+
+li:nth-child(3){
+background-image:linear-gradient(135deg,#00ff87,#60efff,#00c9a7);
+}
+
+li:nth-child(4){
+background-image:linear-gradient(135deg,#ffd200,#ff9a00,#ff6a00);
+}
+
+li:nth-child(5){
+background-image:linear-gradient(135deg,#7f00ff,#e100ff,#c77dff);
+}
+
+li:nth-child(6){
+background-image:linear-gradient(135deg,#ff512f,#dd2476,#ff9966);
+}
+
+li:nth-child(7){
+background-image:linear-gradient(135deg,#11998e,#38ef7d,#00f5d4);
+}
+
+li:nth-child(8){
+background-image:linear-gradient(135deg,#fc466b,#3f5efb,#6a11cb);
+}
+
+li:nth-child(9){
+background-image:linear-gradient(135deg,#00dbde,#fc00ff,#00f2fe);
+}
+
+li:nth-child(10){
+background-image:linear-gradient(135deg,#f7971e,#ffd200,#ff512f);
+}
+
+li:hover{
+transform:translateX(10px) scale(1.03);
+filter:brightness(1.15);
+box-shadow:0 0 35px rgba(255,255,255,0.25);
+}
+
+@keyframes multiGlow{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.special-rule{
+background:linear-gradient(120deg,#00e5ff,#7b2ff7,#ff00c8,#00ff85,#ffd000);
+background-size:500% 500%;
+animation:specialGlow 18s ease infinite;
+border:2px solid rgba(255,255,255,0.18);
+box-shadow:0 0 20px rgba(0,229,255,0.35);
+font-weight:900;
+color:white !important;
+transition:0.4s;
+}
+
+.special-rule:hover{
+transform:translateX(8px) scale(1.02);
+box-shadow:0 0 30px rgba(255,255,255,0.35);
+}
+
+@keyframes specialGlow{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+
+/* INFO BOXES */
+.info-box{
+margin-top:28px;
+padding:24px;
+border-radius:20px;
+font-size:17px;
+font-weight:600;
+box-shadow:0 0 25px rgba(255,255,255,0.08);
+}
+
+.info-box:nth-of-type(1){
+background:linear-gradient(135deg,#003566,#00b4ff);
+border-left:7px solid #00f7ff;
+color:#dff8ff;
+}
+
+.info-box:nth-of-type(2){
+background:linear-gradient(135deg,#5a0000,#ff004c);
+border-left:7px solid #ff4d6d;
+color:#ffe3ea;
+}
+
+.info-box:nth-of-type(3){
+background:linear-gradient(135deg,#003d1f,#00ff85);
+border-left:7px solid #00ff85;
+color:#d9ffe9;
+}
+
+.info-box:nth-of-type(4){
+background:linear-gradient(135deg,#4a2500,#ff9500);
+border-left:7px solid #ffb700;
+color:#fff0d9;
+}
+
+/* PARAGRAPH */
+p{
+font-size:19px;
+padding:16px;
+border-radius:18px;
+background:rgba(255,255,255,0.05);
+color:#f1f5f9;
+margin-bottom:15px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+/* SPECIAL TEXT */
+.highlight{
+color:#fff000;
+font-weight:bold;
+text-shadow:0 0 15px rgba(255,240,0,0.8);
+}
+
+b{
+color:#00e5ff;
+text-shadow:0 0 12px rgba(0,229,255,0.5);
+}
+
+/* FOOTER */
+.footer{
+text-align:center;
+padding:36px;
+font-size:16px;
+background:#020617;
+color:#d1d5db;
+border-top:2px solid rgba(255,255,255,0.08);
+background:linear-gradient(90deg,#020617,#111827,#020617);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.hero{
+height:320px;
+}
+
+.card{
+padding:24px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.sub-title{
+font-size:23px;
+}
+
+li{
+font-size:15px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero"></div>
+
+<div class="container">
+
+<div class="card">
+
+<div class="section-title">REGOLAMENTO DISCORD</div>
+
+<div class="sub-title">1. Rispetto Generale</div>
+<ul>
+<li>È severamente vietato insultare le mamme o i familiari di altri utenti.</li>
+<li><span class="highlight">Punizione:</span> Ban permanente dal server e da Discord.</li>
+<li>È vietato insultare o mancare di rispetto tra staff e cittadini.</li>
+<li>È obbligatorio mantenere un linguaggio educato in tutti i canali.</li>
+<li>È vietato divulgare informazioni personali di altri utenti.</li>
+<li>È vietato inviare link malevoli.</li>
+</ul>
+
+<div class="sub-title">2. Linguaggio</div>
+<ul>
+<li>È vietato usare parolacce nei canali Discord.</li>
+<li><span class="highlight">Punizione:</span> Timeout da 1 minuto fino a 1 settimana.</li>
+</ul>
+
+<div class="sub-title">3. Gerarchia</div>
+<ul>
+<li>È richiesto massimo rispetto verso i gradi più alti dello staff.</li>
+</ul>
+
+<div class="sub-title">4. Staff</div>
+<ul>
+<li>È vietato chiedere di diventare Staff o Admin in chat o privato.</li>
+<li>Esiste un canale apposito per le candidature.</li>
+</ul>
+
+<div class="sub-title">5. Ticket</div>
+<ul>
+<li>Tutti i ticket senza risposta per 2–3 ore verranno chiusi automaticamente.</li>
+</ul>
+
+<div class="info-box">
+© 2026 Tutti i diritti riservati.<br><br>
+Questo contenuto è protetto dalle leggi sul diritto d’autore.
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="section-title">REGOLAMENTO GAME</div>
+
+<p>
+Per garantire un’esperienza RP corretta ed equilibrata, entrando nel server si accettano automaticamente tutte le regole presenti in questo regolamento.
+</p>
+
+<div class="sub-title">1. Comportamento RP scorretto</div>
+<ul>
+<li><b>Fail RP (FRP):</b> Azioni irrealistiche o incoerenti.</li>
+<li><b>No Fear:</b> Ignorare la paura in situazioni pericolose.</li>
+<li><b>Powergaming (PG):</b> Azioni impossibili o personaggio troppo forte.</li>
+<li><b>Revenge Kill (RK):</b> Tornare per vendetta senza motivo RP.</li>
+<li><b>Random Deathmatch (RDM):</b> Uccidere senza motivo RP.</li>
+<li><b>Vehicle Deathmatch (VDM):</b> Investire o uccidere con veicoli.</li>
+<li><b>Cuff-Rush:</b> Arrestare senza contesto RP.</li>
+<li><b>Combat Logging:</b> Uscire durante una scena RP.</li>
+<li><b>No Crash:</b> Ignorare incidenti realistici.</li>
+<li class="special-rule"><span class="highlight">VIETATO USARE GLI STOP STICK.</span></li>
+<li class="special-rule"><span class="highlight">VIETATO USARE BOMBE E C4. BAN PERMANENTE.</span></li>
+<li class="special-rule"><span class="highlight">VIETATO USARE FLASHBANG E GPS.</span></li>
+<li class="special-rule"><span class="highlight">1v1 CONSENTITI NELLE ZONE RDM.</span></li>
+</ul>
+
+<div class="sub-title">2. Abusi verso altri giocatori</div>
+<ul>
+<li><b>Bunny Hopping:</b> Saltare continuamente per vantaggi.</li>
+<li><b>Car-Surf:</b> Stare sopra veicoli senza motivo RP.</li>
+<li><b>Cop Baiting:</b> Provocare la polizia inutilmente.</li>
+<li><b>Cop Evading:</b> Fuggire dalla polizia in modo non realistico o abusivo.</li>
+</ul>
+
+<div class="sub-title">3. Violazioni OOC</div>
+<ul>
+<li><b>Metagaming:</b> Usare informazioni esterne nel gioco.</li>
+<li><b>MixChat:</b> Mischiare IC e OOC.</li>
+<li><b>LTAA:</b> Disconnettersi per evitare arresti.</li>
+<li><b>Stream Sniping:</b> Usare live per disturbare altri.</li>
+</ul>
+
+<div class="sub-title">4. Safe Zone</div>
+<ul>
+<li>Questura</li>
+<li>Caserma Vigili del Fuoco</li>
+<li>Ospedale</li>
+<li>Tuning</li>
+<li>Prigione</li>
+<li>Zone Militari FDO e NOCS</li>
+<li>Ville</li>
+</ul>
+
+<div class="info-box">
+Se entrate in zone militari riservate sarete arrestati immediatamente.<br><br>
+Le scene iniziate fuori Safe-Zone possono continuare all’interno.
+</div>
+
+<div class="sub-title">5. Extra / Regole Generali</div>
+<ul>
+<li><b>Sponsor:</b> Ban permanente e blacklist.</li>
+<li><b>Flame:</b> Insulti gravi verso altri utenti.</li>
+</ul>
+
+<div class="info-box">
+<b>Respawn:</b> Morire definitivamente.<br><br>
+Se un medico vi cura siete solamente feriti e la polizia può arrestarvi da terra.
+</div>
+
+<div class="sub-title">6. Norme per le Gang</div>
+<ul>
+<li>Vietato insultare nelle ville delle altre gang.</li>
+<li>Vietato fare RDM tra membri della stessa gang.</li>
+<li>1vs1 consentiti solo vicino alla zona HARS.</li>
+<li>I poliziotti non possono arrestare durante i 1vs1.</li>
+<li>Ville e ghetti sono Safe-Zone.</li>
+</ul>
+
+<div class="sub-title">7. Norme Rapine</div>
+<ul>
+<li><b>Farm Shop:</b> 2 rapinatori + ostaggio | max 4.000$</li>
+<li class="special-rule"><b>Gioielleria e Banca:</b> non ce max police | ostaggi max</li>
+<li><b>Club:</b> 5 rapinatori | max 8.000$</li>
+<li><b>Gas-N-Go / Fuel / Tool Shop:</b> max 2 rapinatori</li>
+</ul>
+
+<div class="info-box">
+Tutte le rapine devono rispettare le regole RP.<br>
+Ogni abuso comporterà sanzioni.
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+✨ SUD ITALY RP © 2026 - Tutti i diritti riservati ✨
+</div>
+
+</body>
+  </html>
